@@ -1,0 +1,80 @@
+###
+GET http://localhost:5006
+
+###
+POST http://localhost:5006/auth/register
+Content-Type: application/json
+
+{
+    "username":"naseefkj",
+    "email":"naseef@gmail.com",
+    "password":"123123123"
+}
+
+###
+POST http://localhost:5006/auth/login
+Content-Type: application/json
+
+{
+    "email":"naseef@gmail.com",
+    "password":"123123123"
+}
+
+###
+GET http://localhost:5006/post
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhNzg2YzFmY2U4YjY2ODA2NmYxNmY0OSIsImlhdCI6MTc4NjI4MTczMywiZXhwIjoxNzg2MzY4MTMzfQ.sj89NGphgBDd0GR2-YtYBL1zTwg0XrfFFTFg3Mg2jVQ
+
+###
+POST http://localhost:5006/post
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhNzg2YzFmY2U4YjY2ODA2NmYxNmY0OSIsImlhdCI6MTc4NjI4MTczMywiZXhwIjoxNzg2MzY4MTMzfQ.sj89NGphgBDd0GR2-YtYBL1zTwg0XrfFFTFg3Mg2jVQ
+Content-Type: application/json
+
+{
+    "title":"Blog Post api",
+    "content":"Blog post api created successfully"
+}
+
+###
+DELETE  http://localhost:5006/post/6a788e48be7c5197e81d7137
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhNzg2YzFmY2U4YjY2ODA2NmYxNmY0OSIsImlhdCI6MTc4NjI4MTczMywiZXhwIjoxNzg2MzY4MTMzfQ.sj89NGphgBDd0GR2-YtYBL1zTwg0XrfFFTFg3Mg2jVQ
+
+###
+PUT  http://localhost:5006/post/6a787f5afef838a5f1dd40d9
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhNzg2YzFmY2U4YjY2ODA2NmYxNmY0OSIsImlhdCI6MTc4NjI4MTczMywiZXhwIjoxNzg2MzY4MTMzfQ.sj89NGphgBDd0GR2-YtYBL1zTwg0XrfFFTFg3Mg2jVQ
+Content-Type: application/json
+
+{
+    "title":"Blog Post update",
+    "content":"Blog post api updated successfully"
+}
+
+###
+GET http://localhost:5006/post/6a787f5afef838a5f1dd40d9
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhNzg2YzFmY2U4YjY2ODA2NmYxNmY0OSIsImlhdCI6MTc4NjI4MTczMywiZXhwIjoxNzg2MzY4MTMzfQ.sj89NGphgBDd0GR2-YtYBL1zTwg0XrfFFTFg3Mg2jVQ
+
+###
+POST http://localhost:5006/comment/6a787f5afef838a5f1dd40d9
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhNzg2YzFmY2U4YjY2ODA2NmYxNmY0OSIsImlhdCI6MTc4NjI4MTczMywiZXhwIjoxNzg2MzY4MTMzfQ.sj89NGphgBDd0GR2-YtYBL1zTwg0XrfFFTFg3Mg2jVQ
+Content-Type: application/json
+
+{
+    "content":"comment is successful"
+}
+
+###
+GET http://localhost:5006/comment/6a787f5afef838a5f1dd40d9
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhNzg2YzFmY2U4YjY2ODA2NmYxNmY0OSIsImlhdCI6MTc4NjI4MTczMywiZXhwIjoxNzg2MzY4MTMzfQ.sj89NGphgBDd0GR2-YtYBL1zTwg0XrfFFTFg3Mg2jVQ
+
+###
+DELETE  http://localhost:5006/comment/6a78abc6e208876ddaf302da
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhNzg2YzFmY2U4YjY2ODA2NmYxNmY0OSIsImlhdCI6MTc4NjI4MTczMywiZXhwIjoxNzg2MzY4MTMzfQ.sj89NGphgBDd0GR2-YtYBL1zTwg0XrfFFTFg3Mg2jVQ
+
+###
+PUT  http://localhost:5006/comment/6a78abc6e208876ddaf302da
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhNzg2YzFmY2U4YjY2ODA2NmYxNmY0OSIsImlhdCI6MTc4NjI4MTczMywiZXhwIjoxNzg2MzY4MTMzfQ.sj89NGphgBDd0GR2-YtYBL1zTwg0XrfFFTFg3Mg2jVQ
+Content-Type: application/json
+
+{
+    "content":"Updated the comment successfully"
+}
+
