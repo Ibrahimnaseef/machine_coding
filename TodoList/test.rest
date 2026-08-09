@@ -1,0 +1,47 @@
+### GET /
+GET http://localhost:5004
+
+###register user
+POST http://localhost:5004/auth/register
+Content-Type: application/json
+
+{
+    "username":"naseef@gmail.com",
+    "password":"123123123"
+}
+
+###
+POST http://localhost:5004/auth/login
+Content-Type: application/json
+
+{
+    "username":"naseef@gmail.com",
+    "password":"123123123"
+}
+
+###
+GET http://localhost:5004/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhNzc1NTMxMjk1Mjk0ZWVmNTE5OTYzNCIsImlhdCI6MTc4NjIwODI4OCwiZXhwIjoxNzg2Mjk0Njg4fQ.alqe394sVmf_gPBPz5owl7hOxbkmOjjD4i83H1cjQo8
+
+###
+POST http://localhost:5004/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhNzc1NTMxMjk1Mjk0ZWVmNTE5OTYzNCIsImlhdCI6MTc4NjIwODI4OCwiZXhwIjoxNzg2Mjk0Njg4fQ.alqe394sVmf_gPBPz5owl7hOxbkmOjjD4i83H1cjQo8
+Content-Type: application/json
+
+{
+    "task": "todo backend"
+}
+
+###
+PUT http://localhost:5004/todos/6a77603934d629bf61b3433e
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhNzc1NTMxMjk1Mjk0ZWVmNTE5OTYzNCIsImlhdCI6MTc4NjIwODI4OCwiZXhwIjoxNzg2Mjk0Njg4fQ.alqe394sVmf_gPBPz5owl7hOxbkmOjjD4i83H1cjQo8
+Content-Type: application/json
+
+{
+    "completed": true
+}
+
+###
+DELETE http://localhost:5004/todos/6a77692756dad7406369b416
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhNzc1NTMxMjk1Mjk0ZWVmNTE5OTYzNCIsImlhdCI6MTc4NjIwODI4OCwiZXhwIjoxNzg2Mjk0Njg4fQ.alqe394sVmf_gPBPz5owl7hOxbkmOjjD4i83H1cjQo8
+Content-Type: application/json
