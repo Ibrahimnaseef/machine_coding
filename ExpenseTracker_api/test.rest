@@ -1,0 +1,66 @@
+###
+GET http://localhost:5007
+
+###
+POST  http://localhost:5007/register
+Content-Type: application/json
+
+{
+    "username":"naseef",
+    "email":"naseef@gmail.com",
+    "password":"123123123"
+}
+
+###
+POST  http://localhost:5007/login
+Content-Type: application/json
+
+{
+    "email":"naseef@gmail.com",
+    "password":"123123123"
+}
+
+###
+POST  http://localhost:5007/expenses
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhNzk4NmM3NjBhY2NlMzIyMmIwMGVkYiIsImlhdCI6MTc4NjM1MzMyOCwiZXhwIjoxNzg2NDM5NzI4fQ.Uo7ar_YHkCAPICMCe8TC5H8ui3z6tOUSvmv9Kt0LHtw
+Content-Type: application/json
+
+{
+    "title":"my expense",
+    "amount": 50000,
+    "category": "Food",
+    "description":"This mounth expenses",
+    "date":"2026-05-01"
+}
+
+
+###
+GET http://localhost:5007/expenses
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhNzk4NmM3NjBhY2NlMzIyMmIwMGVkYiIsImlhdCI6MTc4NjM1MzMyOCwiZXhwIjoxNzg2NDM5NzI4fQ.Uo7ar_YHkCAPICMCe8TC5H8ui3z6tOUSvmv9Kt0LHtw
+
+### GET one
+GET http://localhost:5007/expenses/6a79a167eccec2efd6656401
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhNzk4NmM3NjBhY2NlMzIyMmIwMGVkYiIsImlhdCI6MTc4NjM1MzMyOCwiZXhwIjoxNzg2NDM5NzI4fQ.Uo7ar_YHkCAPICMCe8TC5H8ui3z6tOUSvmv9Kt0LHtw
+
+###
+PUT http://localhost:5007/expenses/6a79a167eccec2efd6656401
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhNzk4NmM3NjBhY2NlMzIyMmIwMGVkYiIsImlhdCI6MTc4NjM1MzMyOCwiZXhwIjoxNzg2NDM5NzI4fQ.Uo7ar_YHkCAPICMCe8TC5H8ui3z6tOUSvmv9Kt0LHtw
+Content-Type: application/json
+
+{
+    "title":"my expense update",
+    "amount": 400,
+    "category": "Travel",
+    "description":"This mounth expenses Update",
+    "date":"2026-05-05"
+}
+
+###
+DELETE  http://localhost:5007/expenses/6a79a167eccec2efd6656401
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhNzk4NmM3NjBhY2NlMzIyMmIwMGVkYiIsImlhdCI6MTc4NjM1MzMyOCwiZXhwIjoxNzg2NDM5NzI4fQ.Uo7ar_YHkCAPICMCe8TC5H8ui3z6tOUSvmv9Kt0LHtw
+
+###
+GET http://localhost:5007/expenses/summery
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhNzk4NmM3NjBhY2NlMzIyMmIwMGVkYiIsImlhdCI6MTc4NjM1MzMyOCwiZXhwIjoxNzg2NDM5NzI4fQ.Uo7ar_YHkCAPICMCe8TC5H8ui3z6tOUSvmv9Kt0LHtw
+
+
