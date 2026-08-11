@@ -1,0 +1,90 @@
+###
+GET http://localhost:5008
+
+###
+POST http://localhost:5008/register
+Content-Type: application/json
+
+{
+    "username":"naseef",
+    "email":"naseef@gmail.com",
+    "password":"123123123"
+}
+
+###
+POST http://localhost:5008/login
+Content-Type: application/json
+
+{
+    "email":"naseef@gmail.com",
+    "password":"123123123"
+}
+
+
+###
+POST http://localhost:5008/application
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhN2ExNGY5MzFiZjI0NTUzMzg1ZmE4MyIsImlhdCI6MTc4NjM5MTUxNywiZXhwIjoxNzg2NDc3OTE3fQ.dDbhpukGTY--1bXN26SIiQ2KgpRT749fNsVivo6JRjo
+Content-Type: application/json
+
+{
+  "title": "Software Developer",
+  "company": "TCS",
+  "location": "Kochi",
+  "status": "Applied",
+  "notes": "Applied through company website"
+}
+
+
+###
+POST http://localhost:5008/application
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhN2ExNGY5MzFiZjI0NTUzMzg1ZmE4MyIsImlhdCI6MTc4NjM5MTUxNywiZXhwIjoxNzg2NDc3OTE3fQ.dDbhpukGTY--1bXN26SIiQ2KgpRT749fNsVivo6JRjo
+Content-Type: application/json
+
+{
+  "title": "Backend Developer",
+  "company": "Infosys",
+  "location": "Bangalore",
+  "status": "Interview",
+  "notes": "Technical interview scheduled"
+}
+
+###
+GET http://localhost:5008/application
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhN2ExNGY5MzFiZjI0NTUzMzg1ZmE4MyIsImlhdCI6MTc4NjM5MTUxNywiZXhwIjoxNzg2NDc3OTE3fQ.dDbhpukGTY--1bXN26SIiQ2KgpRT749fNsVivo6JRjo
+
+
+###
+GET http://localhost:5008/application/6a7a2d9e12aa3cf2915678d5
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhN2ExNGY5MzFiZjI0NTUzMzg1ZmE4MyIsImlhdCI6MTc4NjM5MTUxNywiZXhwIjoxNzg2NDc3OTE3fQ.dDbhpukGTY--1bXN26SIiQ2KgpRT749fNsVivo6JRjo
+
+###
+PUT http://localhost:5008/application/6a7a2d8212aa3cf2915678d4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhN2ExNGY5MzFiZjI0NTUzMzg1ZmE4MyIsImlhdCI6MTc4NjM5MTUxNywiZXhwIjoxNzg2NDc3OTE3fQ.dDbhpukGTY--1bXN26SIiQ2KgpRT749fNsVivo6JRjo
+Content-Type: application/json
+
+{
+    "title": "Senior Backend Developer",
+    "company": "Infosys",
+    "location": "Bangalore",
+    "status": "Interview",
+    "appliedDate": "2026-08-15",
+    "notes": "Technical interview completed"
+}
+
+###
+DELETE http://localhost:5008/application/6a7a2d8212aa3cf2915678d4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhN2ExNGY5MzFiZjI0NTUzMzg1ZmE4MyIsImlhdCI6MTc4NjM5MTUxNywiZXhwIjoxNzg2NDc3OTE3fQ.dDbhpukGTY--1bXN26SIiQ2KgpRT749fNsVivo6JRjo
+
+
+###
+GET http://localhost:5008/application?status=Applied
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhN2ExNGY5MzFiZjI0NTUzMzg1ZmE4MyIsImlhdCI6MTc4NjM5MTUxNywiZXhwIjoxNzg2NDc3OTE3fQ.dDbhpukGTY--1bXN26SIiQ2KgpRT749fNsVivo6JRjo
+
+
+###
+GET http://localhost:5008/application?company=TCS
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhN2ExNGY5MzFiZjI0NTUzMzg1ZmE4MyIsImlhdCI6MTc4NjM5MTUxNywiZXhwIjoxNzg2NDc3OTE3fQ.dDbhpukGTY--1bXN26SIiQ2KgpRT749fNsVivo6JRjo
+
+
+
+
